@@ -3,6 +3,7 @@
 <title>ELPEG FARM</title>
 <link rel="stylesheet"href="Agro-Cropscolor.css">
 <link rel="stylesheet"href="footer.css">
+<link rel="stylesheet"href="cropform.css">
 <div  id="Agro-Cropsheader">
 <img align="left" src="logos/my logo3.jpg" hieght="220px" width="200px" alt="this is my company's logo"/><img align="right" src="logos/my logo4.jpg" height="142px" width="192px" alt="this is my company's logo"/>
 
@@ -33,8 +34,27 @@
 <input type="number" name="kilograms"/><br/>
 <br/>
 <br/>
-<input type="Submit" value="Submit"/>
+<p align="right"><button type="Submit"/>Submit</button></p>
 </form>
+	<script src=" https://smtpjs.com/v3/smtp.js"></script>
+<script>
+	function sendEmail(){
+		Email.send({
+    Host : "smtp.yahoo.com",
+    Username : "Elpegmalawi@yahoo.com",
+    Password : "elpeg@4pillars",
+    To : 'jhemsab5@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "New Sale Envoice",
+    Body : "Name: " +document.getElementById("name").value
+           + "<br> Email: " +document.getElementById("email").value 
+           + "<br> Phone no: " +document.getElementById("Phone").value
+           + "<br> Message: " +document.getElementById("message").value
+}).then(
+  message => alert("Message Sent Succesfully)
+  );
+	}
+</script>
 <br/>
 <li><a href="Cropsales.html"target="_blank"><big>Previous</big></a></li>
 <p align="center">Back to <a href="index.html"target="_blank"><big>Home</big></a></p>
