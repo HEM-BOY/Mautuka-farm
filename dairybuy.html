@@ -54,6 +54,27 @@
 <br/>
 <p align="right"><button type="Submit"/>Submit</button></p>
 </form>
+
+<script src=" https://smtpjs.com/v3/smtp.js"></script>
+<script>
+	function sendEmail(){
+		Email.send({
+    Host : "smtp.gmail.com",
+    Username : "jhemsab5@gmail.com",
+    Password : "esbi@401k",
+    To : 'Elpegmalawi@yahoo.com',
+    From : document.getElementById("email").value,
+    Subject : "New Sale Envoice",
+    Body : "Name: " +document.getElementById("name").value
+           + "<br> Email: " +document.getElementById("email").value 
+           + "<br> Phone no: " +document.getElementById("Phone").value
+           + "<br> Message: " +document.getElementById("message").value
+}).then(
+  message => alert("Message Sent Succesfully)
+  );
+	}
+</script>
+
 <p><a href="dairysales.html"target="_blank"><big>Previous</big></a></p>
  <p align="center">Back to <a href="index.html"target="_blank"><big>Home</big></a></p>
  <div class="footer">
