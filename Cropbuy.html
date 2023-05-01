@@ -15,7 +15,8 @@
 <hr>
 </div>
 <br/>
-<form action="jhemsab5@gmail.com" method="post">
+<div class="container">
+<form onsubmit="sendEmail(); reset(); return false;">
 <p>Please, Enter your Email, Phone number and Address (Residence)<p/>Email
 	<input type="text" name="Email"/><br/>Phone
 	<input type="number" name="Phone number"/><br/>Address
@@ -40,10 +41,10 @@
 <script>
 	function sendEmail(){
 		Email.send({
-    Host : "smtp.yahoo.com",
-    Username : "Elpegmalawi@yahoo.com",
-    Password : "elpeg@4pillars",
-    To : 'jhemsab5@gmail.com',
+    Host : "smtp.gmail.com",
+    Username : "jhemsab5@gmail.com",
+    Password : "esbi@401k",
+    To : 'Elpegmalawi@yahoo.com',
     From : document.getElementById("email").value,
     Subject : "New Sale Envoice",
     Body : "Name: " +document.getElementById("name").value
